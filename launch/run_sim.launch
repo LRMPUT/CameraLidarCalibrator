@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="artifical_time_shift" default="0.0" />
+    <arg name="lidar_gauss_sigma" default="0.01" />
+    <arg name="intelligent_edge_selection" default="false" />
+    <arg name="max_edge_number" default="20000" />
+    <arg name="random_seed" default="0" />
+    <arg name="time_shift_fixed" default="false" />
+    <arg name="camera_chessboard_framerate" default="10" />
+
+    <node pkg="camera_lidar_calibrator" type="camera_lidar_calibrator_sim" name="camera_lidar_calibrator_sim" output="screen" required="true">
+        <!--    <group ns="camera_lidar_calibrator_sim">-->
+
+        <!-- Artificial time shift  -->
+        <param name="artifical_time_shift" value="$(arg artifical_time_shift)" />
+
+        <!-- 3D Lidar error sigma-->
+        <param name="lidar_gauss_sigma" value="$(arg lidar_gauss_sigma)" />
+
+        <!-- Intelligent selection critia -->
+        <param name="intelligent_edge_selection" value="$(arg intelligent_edge_selection)" />
+        <param name="max_edge_number" value="$(arg max_edge_number)" />
+
+        <!-- Random seed -->
+        <param name="random_seed" value="$(arg random_seed)" />
+
+        <!-- Should we fix time in optimization -->
+        <param name="time_shift_fixed" value="$(arg time_shift_fixed)" />
+
+        <!-- The chessboard framerate from camera -->
+        <param name="camera_chessboard_framerate" value="$(arg camera_chessboard_framerate)" />
+
+    </node>
+
+</launch>
