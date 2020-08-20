@@ -66,7 +66,7 @@ in IEEE Robotics and Automation Letters,
 vol. 5, no. 4, pp. 6451-6458, Oct. 2020, doi: 10.1109/LRA.2020.3014639.
 ``
 
-``
+```
 @ARTICLE{9161262,
   author={M. {Nowicki}},
   journal={IEEE Robotics and Automation Letters}, 
@@ -75,7 +75,7 @@ vol. 5, no. 4, pp. 6451-6458, Oct. 2020, doi: 10.1109/LRA.2020.3014639.
   volume={5},
   number={4},
   pages={6451-6458}
-``
+```
 
 # FAQ
 
