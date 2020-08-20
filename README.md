@@ -27,11 +27,11 @@ clear && catkin build --cmake-args  -DCMAKE_BUILD_TYPE=Release --make-args -j 3
 
 First download the data by typing:
 
-```
+``
 bash prepareExemplaryData.sh
-```
+``
 
-Then uou can run real-date calibration (based on information in ``launch/run_rosbag_velo.launch``) with:
+Then you can run real-date calibration (based on information in ``launch/run_rosbag_velo.launch``) with:
 
 ``
 roslaunch camera_lidar_calibrator run_rosbag_velo.launch  
@@ -60,12 +60,13 @@ Some debugging information is stored in directory ``log``.
 If you found the article/code useful, please cite work ([IEEE Explore](https://ieeexplore.ieee.org/document/9161262),
                                                         [arXiv](https://arxiv.org/abs/2006.16081)):
 
-```
+``
 M. Nowicki, "Spatiotemporal Calibration of Camera and 3D Laser Scanner," 
-in IEEE Robotics and Automation Letters, vol. 5, no. 4, pp. 6451-6458, Oct. 2020, doi: 10.1109/LRA.2020.3014639.
-```
+in IEEE Robotics and Automation Letters, 
+vol. 5, no. 4, pp. 6451-6458, Oct. 2020, doi: 10.1109/LRA.2020.3014639.
+``
 
-```
+``
 @ARTICLE{9161262,
   author={M. {Nowicki}},
   journal={IEEE Robotics and Automation Letters}, 
@@ -74,13 +75,13 @@ in IEEE Robotics and Automation Letters, vol. 5, no. 4, pp. 6451-6458, Oct. 2020
   volume={5},
   number={4},
   pages={6451-6458}
-```
+``
 
 # FAQ
 
 ##### 1. What are the requirements of your method?
 
-Chessboard pattern, global-shutter camera, shared view betweeb the camera/3D LiDAR
+Chessboard pattern (5 by 8, 10 cm grid is asssumed for now), global-shutter camera, shared view between the camera/3D LiDAR
 
 ##### 2. How can I use the laser point timestamps directly from the LiDAR driver?
 

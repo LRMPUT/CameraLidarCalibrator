@@ -41,7 +41,7 @@
 CameraLaserCalibrationSIM::CameraLaserCalibrationSIM() : nh("~"), CameraLaserCalibration() {
     TAG = "CameraLaserCalibrationSIM";
 
-    std::string path = ros::package::getPath("camera_lidar_calibrator");
+    std::string path = "log/" + ros::package::getPath("camera_lidar_calibrator");
 
     // Parameters to read from file
     double artificialTimeShift = readParameter<double> (nh, "artifical_time_shift", 0.0);
